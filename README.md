@@ -1,8 +1,8 @@
 # mongodb数据库
 ### 1.安装
 （1）先安装（一路下一步）<br>
-```mongodb-win32-x86_64-2008plus-ssl-3.4.2-signed.msi```
-（2）再安装（可能提示已安装过）
+```mongodb-win32-x86_64-2008plus-ssl-3.4.2-signed.msi```<br>
+（2）再安装（可能提示已安装过）<br>
 ```vc_redist.x64.exe```
 ### 2.建立数据存储的文件夹
 在D盘中建立data文件夹，在data中建立db文件夹
