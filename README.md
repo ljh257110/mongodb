@@ -1,7 +1,9 @@
 # mongodb数据库
 ### 1.安装
 （1）先安装（一路下一步）<br>
+```mongodb-win32-x86_64-2008plus-ssl-3.4.2-signed.msi```
 （2）再安装（可能提示已安装过）
+```vc_redist.x64.exe```
 ### 2.建立数据存储的文件夹
 在D盘中建立data文件夹，在data中建立db文件夹
 ### 3.启动服务
@@ -18,18 +20,18 @@
 【注】在未给user添加数据前用show dbs查看现有库时不显示。<br>
 （4）输入```db```可查看现在位于哪个库<br>
 （5）输入```db.admin```可进入或创建一个在当前库下的集合admin<br>
-（6）插入数据：
+（6）插入数据：<br>
 ①输入```db.admin.insertOne({name: 'tomcat'})```可插入一条数据<br>
 ②输入```db.admin.insert([{name: 'jerry', sex: 'man'}, {username: 'jim', pwd:'123456'}, {name: 'jack', address: {country: 'China', province: 'shandong', aaa: {a1: '1', a2: '2'}}}])```可插入多条数据<br>
 （7）查询数据：<br>
-     ①```db.admin.find()```查询所有
-     //find(查询条件，显示指定属性)<br>
-     ②```db.admin.find({name: 'tomcat'})```查询name为tomcat的数据
-     //查询, 0不显示，1显示<br>
-     ③```db.admin.find({name: 'zhangsan'},{sex:0,height:0})```查询name为zhangsan的数据，不显示sex和height<br>
-     ④```db.admin.find({name: 'zhangsan'},{name:1,age:1})```查询name为zhangsan的数据，显示name和age<br>
-     ⑤```db.admin.find({name: 'tomcat'}).sort({_id:-1}) ```//排序，1升序， -1降序<br>
-     ⑥```db.admin.find({name: 'tomcat'}).size() ``` //符合条件的数量<br>
+    	 ①```db.admin.find()```查询所有
+    	 //find(查询条件，显示指定属性)<br>
+    	 ②```db.admin.find({name: 'tomcat'})```查询name为tomcat的数据
+    	 //查询, 0不显示，1显示<br>
+    	 ③```db.admin.find({name: 'zhangsan'},{sex:0,height:0})```查询name为zhangsan的数据，不显示sex和height<br>
+    	 ④```db.admin.find({name: 'zhangsan'},{name:1,age:1})```查询name为zhangsan的数据，显示name和age<br>
+    	 ⑤```db.admin.find({name: 'tomcat'}).sort({_id:-1}) ```//排序，1升序， -1降序<br>
+    	 ⑥```db.admin.find({name: 'tomcat'}).size() ``` //符合条件的数量<br>
 （8）修改数据：<br>
 【注】第一个参数为修改条件，第二个参数为修改内容，没有的话会创建，使用$set<br>
 ①修改符合条件的第一条数据
@@ -50,15 +52,15 @@
 	  }
 	)
 ```
-（9）删除数据：
-    ①删除符合条件的第一条数据
-    ```db.admin.deleteOne({name: 'mary'})```<br>
-    ②删除符合条件的所有数据<br>
-    ```db.admin.remove({name: 'tomcat'})```<br>
-    ③删除库
-    ```db.dropDatabase()```
+（9）删除数据：<br>
+   	 ①删除符合条件的第一条数据<br>
+   	 ```db.admin.deleteOne({name: 'mary'})```<br>
+   	 ②删除符合条件的所有数据<br>
+   	 ```db.admin.remove({name: 'tomcat'})```<br>
+   	 ③删除库<br>
+   	 ```db.dropDatabase()```
 （10）```db.stats()```查询当前库中有多少集合（collections）<br>
-（11）```show collections```展示当前库中的集合
+（11）```show collections```展示当前库中的集合<br>
 ### 5.在node.js中连接mongodb
 （1）首先本地安装mongodb -D 
 ```cnpm install mongodb -D```<br>
