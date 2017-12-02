@@ -51,10 +51,10 @@
 	)
 ```
 （9）删除数据：
-    ①删除符合条件的第一条数据<br>
-    ```db.admin.deleteOne({name: 'mary'})```
+    ①删除符合条件的第一条数据
+    ```db.admin.deleteOne({name: 'mary'})```<br>
     ②删除符合条件的所有数据<br>
-    ```db.admin.remove({name: 'tomcat'})```
+    ```db.admin.remove({name: 'tomcat'})```<br>
     ③删除库
     ```db.dropDatabase()```
 （10）```db.stats()```查询当前库中有多少集合（collections）<br>
