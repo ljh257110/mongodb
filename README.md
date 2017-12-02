@@ -22,14 +22,14 @@
 ①输入```db.admin.insertOne({name: 'tomcat'})```可插入一条数据<br>
 ②输入```db.admin.insert([{name: 'jerry', sex: 'man'}, {username: 'jim', pwd:'123456'}, {name: 'jack', address: {country: 'China', province: 'shandong', aaa: {a1: '1', a2: '2'}}}])```可插入多条数据<br>
 （7）查询数据：<br>
-①```db.admin.find()```查询所有
-//find(查询条件，显示指定属性)<br>
-②```db.admin.find({name: 'tomcat'})```查询name为tomcat的数据
-//查询, 0不显示，1显示<br>
-③```db.admin.find({name: 'zhangsan'},{sex:0,height:0})```查询name为zhangsan的数据，不显示sex和height<br>
-④```db.admin.find({name: 'zhangsan'},{name:1,age:1})```查询name为zhangsan的数据，显示name和age<br>
-⑤```db.admin.find({name: 'tomcat'}).sort({_id:-1}) ```//排序，1升序， -1降序<br>
-⑥```db.admin.find({name: 'tomcat'}).size() ``` //符合条件的数量<br>
+     ①```db.admin.find()```查询所有
+     //find(查询条件，显示指定属性)<br>
+     ②```db.admin.find({name: 'tomcat'})```查询name为tomcat的数据
+     //查询, 0不显示，1显示<br>
+     ③```db.admin.find({name: 'zhangsan'},{sex:0,height:0})```查询name为zhangsan的数据，不显示sex和height<br>
+     ④```db.admin.find({name: 'zhangsan'},{name:1,age:1})```查询name为zhangsan的数据，显示name和age<br>
+     ⑤```db.admin.find({name: 'tomcat'}).sort({_id:-1}) ```//排序，1升序， -1降序<br>
+     ⑥```db.admin.find({name: 'tomcat'}).size() ``` //符合条件的数量<br>
 （8）修改数据：<br>
 【注】第一个参数为修改条件，第二个参数为修改内容，没有的话会创建，使用$set<br>
 ①修改符合条件的第一条数据
@@ -51,17 +51,17 @@
 	)
 ```
 （9）删除数据：
-    ①删除符合条件的第一条数据
+    ①删除符合条件的第一条数据<br>
     ```db.admin.deleteOne({name: 'mary'})```
-    ②删除符合条件的所有数据
+    ②删除符合条件的所有数据<br>
     ```db.admin.remove({name: 'tomcat'})```
     ③删除库
     ```db.dropDatabase()```
-（10）```db.stats()```查询当前库中有多少集合（collections）
+（10）```db.stats()```查询当前库中有多少集合（collections）<br>
 （11）```show collections```展示当前库中的集合
 ### 5.在node.js中连接mongodb
 （1）首先本地安装mongodb -D 
-```cnpm install mongodb -D```
+```cnpm install mongodb -D```<br>
 （2）新建mongodb.js，引入模块、权限认证、创建db的连接
 ```js
 	const mongodb = require('mongodb');
@@ -84,7 +84,7 @@
 【注】```conn.find().toArray```可将得到的数据转为数组
 forEach可得到数组中的每一个元素
 ```js
-		// 打开数据库
+	// 打开数据库
 	db.open(function(err, results) {
 	  if(err) {
 	    console.log(err);
