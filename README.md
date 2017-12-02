@@ -58,7 +58,7 @@
    	 ②删除符合条件的所有数据<br>
    	 ```db.admin.remove({name: 'tomcat'})```<br>
    	 ③删除库<br>
-   	 ```db.dropDatabase()```
+   	 ```db.dropDatabase()```<br>
 （10）```db.stats()```查询当前库中有多少集合（collections）<br>
 （11）```show collections```展示当前库中的集合<br>
 ### 5.在node.js中连接mongodb
